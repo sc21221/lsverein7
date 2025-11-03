@@ -17,12 +17,12 @@ class RolePolicy
 
     public function create(User $user)
     {
-        return $user->hasAdminRights();
+        return $user->hasAdvancedRights();
     }
 
     public function update(User $user, Role $role)
     {
-        return $user->admin || ($role->club_id && $user->hasAdminRights($role->club_id));
+        return $user->admin || ($role->club_id && $user->hasAdvancedRights($role->club_id));
     }
 
     public function delete(User $user, Role $role)

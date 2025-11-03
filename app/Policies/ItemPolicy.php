@@ -17,12 +17,12 @@ class ItemPolicy
 
     public function create(User $user)
     {
-        return $user->hasAdminRights();
+        return $user->hasAdvancedRights();
     }
 
     public function update(User $user, Item $item)
     {
-        return $user->hasAdminRights($item->club_id);
+        return $user->hasAdvancedRights($item->club_id);
     }
 
     public function delete(User $user, Item $item)

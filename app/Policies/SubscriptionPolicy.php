@@ -17,22 +17,22 @@ class SubscriptionPolicy
 
     public function create(User $user)
     {
-        return $user->hasAdminRights();
+        return $user->hasAdvancedRights();
     }
 
     public function update(User $user, Subscription $subscription)
     {
-        return $user->hasAdminRights() && $user->club_id === $subscription->club_id;
+        return $user->hasAdvancedRights() && $user->club_id === $subscription->club_id;
     }
 
     public function delete(User $user, Subscription $subscription)
     {
-        return $user->hasAdminRights() && $user->club_id === $subscription->club_id;
+        return $user->hasAdvancedRights() && $user->club_id === $subscription->club_id;
     }
 
     public function debit(User $user)
     {
-        return $user->hasAdminRights();
+        return $user->hasAdvancedRights();
     }
 
 }

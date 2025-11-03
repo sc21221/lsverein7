@@ -17,12 +17,12 @@ class SectionPolicy
 
     public function create(User $user)
     {
-        return $user->hasAdminRights();
+        return $user->hasAdvancedRights();
     }
 
     public function update(User $user, Section $section)
     {
-        return $user->admin || ($section->club_id && $user->hasAdminRights($section->club_id));
+        return $user->admin || ($section->club_id && $user->hasAdvancedRights($section->club_id));
     }
 
     public function delete(User $user, Section $section)

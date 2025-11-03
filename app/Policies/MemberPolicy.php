@@ -22,17 +22,17 @@ class MemberPolicy
 
     public function create(User $user)
     {
-        return $user->hasAdminRights();
+        return $user->hasAdvancedRights();
     }
 
     public function update(User $user, Member $member)
     {
-        return $user->hasAdminRights() && $user->club_id === $member->club_id;
+        return $user->hasAdvancedRights() && $user->club_id === $member->club_id;
     }
 
     public function delete(User $user, Member $member)
     {
-        return $user->hasAdminRights() && $user->club_id === $member->club_id;
+        return $user->hasAdvancedRights() && $user->club_id === $member->club_id;
     }
 
 }

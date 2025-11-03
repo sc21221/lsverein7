@@ -17,12 +17,12 @@ class EventPolicy
 
     public function create(User $user)
     {
-        return $user->hasAdminRights();
+        return $user->hasAdvancedRights();
     }
 
     public function update(User $user, Event $event)
     {
-        return $user->admin || ($event->club_id && $user->hasAdminRights($event->club_id));
+        return $user->admin || ($event->club_id && $user->hasAdvancedRights($event->club_id));
     }
 
     public function delete(User $user, Event $event)

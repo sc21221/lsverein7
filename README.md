@@ -44,6 +44,23 @@ Ist ein Fork von [vauteer/lsverein7}(https://github.com/vauteer/lsverein7)
 15. Eine Domain/Subdomain einrichten<br>Dokumentenstamm ist das 'public' Verzeichnis! 
 16. Mit den Administrator-Daten anmelden
 
+## Deployment auf shared hosting
+- Auf dem shared hosting: 
+  - Webhosting anlegen mit Verknüpfung Subdomain zu Folder
+  - leere Datenbank anlegen
+  - ssh shell öffnen im angelegten Verzeichnis: 
+    - git clone https://github.com/sc21221/lsverein7
+    - `cp .env.example .env`
+    - `composer install --optimize-autoloader --no-dev`
+    - `php artisan storage:link`
+    - `php artisan key:generate`"
+    - in config/database.php bei mysql / engine : statt null : 'InnoDB'
+    - `php artisan migrate`
+  - Via phpMyAdmin einen "Export" der Datenbank Inhalte importieren
+  - da auf dem shared hosting kein npm oder vite vorhanden ist:
+    - per ftp alles vom dev unter public/build auf den server kopieren
+  - anmelden. 
+ 
 ## Wiederherstellen eines Backups
 Machen Sie ein Backup, falls sie Daten überschreiben!
 1. Installieren der Anwendung, falls nötig
