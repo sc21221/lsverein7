@@ -30,7 +30,7 @@ let logout = () => {
 <template>
     <div class="min-h-full">
         <Disclosure as="nav" class="bg-gray-800" v-slot="{ open }">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-max mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-16">
                     <div class="flex items-center">
                         <div v-if="club" class="flex items-center">
@@ -163,7 +163,7 @@ let logout = () => {
         </Disclosure>
 
         <main>
-            <div class="max-w-7xl mx-auto py-2 sm:px-6 lg:px-8">
+            <div class="max-w-max mx-auto py-2 sm:px-2 lg:px-3">
                 <div v-if="flashSuccess" class="rounded-md bg-green-50 p-4">
                     <div class="flex justify-center">
                         <div class="flex-shrink-0">

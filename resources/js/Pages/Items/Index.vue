@@ -37,12 +37,12 @@ watch(search, throttle(function (value) {
 <template>
     <Head title="Ereignisse"/>
     <div
-        class="w-full max-w-2xl mx-auto bg-gray-100 text-gray-900 text-sm sm:rounded sm:border sm:shadow sm:overflow-hidden mt-2 px-4 sm:px-6 lg:px-8">
+        class="w-full w-screen mx-auto bg-gray-100 text-gray-900 text-sm sm:rounded sm:border sm:shadow sm:overflow-hidden mt-2 px-4 sm:px-6 lg:px-8">
         <input type="text" placeholder="Suchen..." v-model="search"
                class="text-gray-700 px-2 mr-4 my-2 text-base border rounded-lg"
         />
         <div class="mt-4 mb-4 flex flex-col">
-            <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-2 lg:-mx-3">
                 <div class="min-w-full py-2 align-middle md:px-6 lg:px-8">
                     <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
                         <table class="min-w-full divide-y divide-gray-300">

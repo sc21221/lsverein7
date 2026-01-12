@@ -16,7 +16,7 @@ let props = defineProps({
         class="hidden md:block fixed z-20 inset-0 h-full w-full bg-black opacity-50 cursor-default"
     ></button>
     <div
-        class="relative z-30 w-full max-w-xl mx-auto bg-gray-100 text-gray-900 text-sm sm:rounded sm:border sm:shadow sm:overflow-hidden mt-2 px-4 sm:px-6 lg:px-8">
+        class="relative z-30 w-full w-screen mx-auto bg-gray-100 text-gray-900 text-sm sm:rounded sm:border sm:shadow sm:overflow-hidden mt-2 px-4 sm:px-6 lg:px-8">
         <div class="w-full text-2xl font-medium text-gray-900 mt-2">Downloads für SEPA-Bankeinzug</div>
 
         <div class="overflow-hidden bg-white shadow sm:rounded-md my-4">

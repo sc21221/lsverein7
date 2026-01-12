@@ -68,7 +68,7 @@ watch(exportFormat, (newValue) => {
 <template>
     <Head title="Mitglieder"/>
     <div
-        class="w-full max-w-4xl mx-auto bg-gray-100 text-gray-900 text-sm sm:rounded sm:border sm:shadow sm:overflow-hidden mt-2 px-4 sm:px-6 lg:px-6">
+        class="w-full w-screen mx-auto bg-gray-100 text-gray-900 text-sm sm:rounded sm:border sm:shadow sm:overflow-hidden mt-2 px-4 sm:px-6 lg:px-6">
         <div class="grid grid-cols-1 gap-y-4 gap-x-2 sm:grid-cols-8 py-2 mt-2">
             <MySelect class="sm:col-span-3" v-model="state.filter" :options="props.filters" id="quick-filters" :label="`Auswahl (${members.meta.total} Personen)`" />
             <MyTextInput class="sm:col-span-2" v-model="state.search" id="search" label="Suchen"
@@ -80,7 +80,7 @@ watch(exportFormat, (newValue) => {
         <div class="flex">
         </div>
         <div class="mt-4 mb-4 flex flex-col">
-            <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-2 lg:-mx-3">
                 <div class="min-w-full py-2 align-middle md:px-6 lg:px-8">
                     <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
                         <table class="min-w-full min-h-72 divide-y divide-gray-300">
