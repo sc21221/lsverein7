@@ -19,6 +19,7 @@ class MemberSectionResource extends JsonResource
             'id' => $this->id,
             'name' => $this->section->name,
             'range' => $this->range(),
+            'age' => $this->age(),
             'memo' => $this->memo,
 
             'modifiable' => $request->user()->can('update', $this->member),

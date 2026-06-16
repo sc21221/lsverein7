@@ -21,8 +21,8 @@ class MemberResource extends JsonResource
             'surname' => $this->surname,
             'first_name' => $this->first_name,
             'address' => $this->zipcode . ' ' . $this->city . ' ' . $this->street,
-            'subscriptions' => Str::limit($this->currentSubscriptions(), 25),
-            'currentRoles' => Str::limit($this->currentRoles(), 25),
+            'subscriptions' => Str::limit($this->currentSubscriptions(), 50),
+            'currentRoles' => Str::limit($this->currentRoles(), 50),
             'gender' => $this->gender,
             'sex' => $this->gender->name,
             'birthday' => formatDate($this->birthday),
@@ -30,8 +30,8 @@ class MemberResource extends JsonResource
             'gone' => $this->gone(),
             'isMember' => $this->isMember(),
             'membershipYears' => $this->membershipYears(),
-            'sections' => Str::limit($this->currentSections(), 25),
-            'lastEvent' => Str::limit($this->lastEvent(), 25),
+            'sections' => Str::limit($this->currentSections(), 50),
+            'lastEvent' => Str::limit($this->lastEvent(), 50),
 
             'modifiable' => $request->user()->can('update', $this->resource),
         ];

@@ -152,7 +152,8 @@ watch(exportFormat, (newValue) => {
                                     <div>{{ member.birthday }} (Alter: {{ member.age }} <span>/ Mitglied seit {{ member.membershipYears }}</span> Jahren)</div>
                                 </td>
                                 <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm sm:pl-6 hidden md:table-cell">
-                                    <div>{{ member.sections }} {{ member.currentRoles }}</div>
+                                    <div>{{ member.sections }}</div>
+                                    <div>{{ member.currentRoles }}</div>
                                     <div v-if="clubAdmin">{{ member.subscriptions }} {{ member.lastEvent }}</div>
                                 </td>
                                 <td class="px-3">

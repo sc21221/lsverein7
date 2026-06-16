@@ -216,6 +216,9 @@ const submitButtonText = computed(() => editMode.value ? "Speichern" : "Hinzufü
                                                             <th scope="col">
 
                                                             </th>
+                                                            <th scope="col">
+
+                                                            </th>
                                                             <th scope="col" class="relative w-5 py-0 pl-3 pr-1 sm:pr-2">
                                                                 <MyButton class="py-1" @click="router.get(`/members/${props.member.id}/section/create`)">
                                                                     Neu
@@ -230,6 +233,9 @@ const submitButtonText = computed(() => editMode.value ? "Speichern" : "Hinzufü
                                                             </td>
                                                             <td class="px-3 py-2 text-sm text-gray-500">
                                                                 {{ memberSection.range }}
+                                                            </td>
+                                                            <td class="px-3 py-2 text-sm text-gray-500">
+                                                                {{ memberSection.age }} Jahre
                                                             </td>
                                                             <td class="px-3">
                                                                 <div class="flex justify-end">

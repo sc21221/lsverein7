@@ -71,7 +71,7 @@ let props = defineProps({
                     <div class="sm:col-span-1">
                         <dt class="text-sm font-medium text-gray-500">Sparten</dt>
                         <dd class="mt-1 text-sm text-gray-900" v-for="section in memberSections.data">
-                            {{ section.name }} {{ section.range }}
+                            {{ section.name }} {{ section.range }} ({{ section.age }} Jahre)
                         </dd>
                     </div>
                     <div class="sm:col-span-1">

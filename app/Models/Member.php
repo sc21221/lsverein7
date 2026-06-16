@@ -213,7 +213,7 @@ class Member extends Model
             }
         }
 
-        return join('|', $sections);
+        return join('<br/>', $sections);
     }
 
     public function currentRoles()
